@@ -3,7 +3,7 @@ import './timestamp.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRotateRight, faPrint } from "@fortawesome/free-solid-svg-icons";
 
-const Timestamp = () => {
+export default function Timestamp() {
   const [time, setTime] = useState("");
 
   // Function to get the current time and date in EST
@@ -44,5 +44,3 @@ const Timestamp = () => {
     </div>
   );
 };
-
-export default Timestamp;

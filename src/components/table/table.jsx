@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import './table.css';
 
-const Table = ({ columns, data, tableCaption }) => {
+export default function Table({ columns, data, tableCaption }) {
   return (
     <div>
       {/* Accessible caption */}
@@ -71,5 +71,3 @@ Table.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
   tableCaption: PropTypes.string,
 };
-
-export default Table;

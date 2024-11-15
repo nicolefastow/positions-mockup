@@ -2,6 +2,7 @@ import PageHeader from './components/page-header/page-header';
 import Panel from './components/panel/panel';
 import './App.css';
 import Table from './components/table/table';
+import SummaryTotal from './components/summary-total/summary-total';
 
 function App() {
   const columns = [
@@ -18,13 +19,15 @@ function App() {
     { name: "Diana", age: 28, country: "Germany", salary: 72000 },
   ];
 
+  const values = ["Box 1", "Box 2", "Box 3", "Box 4", "Box 5"];
+
   return (
     <div className='positions-page'>
       <PageHeader
         pageTitle="Positions">
       </PageHeader>
       <Panel title="Accounts Summary">
-        <p>This content is always visible because the panel is not collapsible.</p>
+        <SummaryTotal values={values}></SummaryTotal>
       </Panel>
       <Panel title="Account Details" collapsible>
         <Table

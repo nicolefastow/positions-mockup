@@ -4,7 +4,7 @@ import './panel.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-const Panel = ({ title, children, collapsible = false }) => {
+export default function Panel({ title, children, collapsible = false }) {
   const [isExpanded, setIsExpanded] = useState(!collapsible);
 
   // Toggle the panel state
@@ -35,5 +35,3 @@ Panel.propTypes = {
   children: PropTypes.node.isRequired,
   collapsible: PropTypes.bool,
 };
-
-export default Panel;
